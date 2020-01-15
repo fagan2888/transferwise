@@ -1,5 +1,6 @@
 # transferwise
-automate to create and compare quotes periodically to get the best rate
+automate to create and compare quotes periodically to get the best rate.
+Website: transferwise.com
 
 # How-To
 - Open an account at transferwise.com
