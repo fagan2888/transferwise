@@ -12,3 +12,5 @@ the script will create the quote every time the script is executed. The quote ra
 
 *This script helps you monitor and the get the best rates, it is recommended to send the summary data in `run.py` to your Email or Social Media to inform you if a better rate is obtained.*
  
+# Precautions
+Transferwise only allow the storing of quotes up to 3 days (depends on currency), this script will compare the expiration date time with the current date time and decides to generate a new quote if the old quote expires.
