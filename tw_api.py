@@ -50,6 +50,11 @@ class tw_api :
 
         return r.json()
 
+    def check_transfer(self, id) :
+        r = requests.get('https://api.transferwise.com/v1/transfers/' + str(id), headers=self.headers)
+
+        return r.json()
+
     def cancel_transfer(self, id) :
         r = requests.put('https://api.transferwise.com/v1/transfers/' + str(id) + '/cancel', headers=self.headers)
 

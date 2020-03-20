@@ -46,7 +46,9 @@ class transferwise :
                 record_parts = record.split(',')
                 if datetime.datetime.strptime(record_parts[2], '%Y-%m-%dT%H:%M:%SZ') < datetime.datetime.utcnow() :
                     if len(record_parts) >= 7 :
-                        self.tw.cancel_transfer(record_parts[6])
+                        transfer = self.tw.check_transfer(record_parts[6])
+                        if transfer['status'] == 'incoming_payment_waiting' :
+                            self.tw.cancel_transfer(record_parts[6])
 
                     file = open(self.record_file, 'w+')
                     file.write('')
