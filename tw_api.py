@@ -1,13 +1,13 @@
 import requests
 import uuid
 
-class transferwise :
-    def __init__(self) :
+class tw_api :
+    def __init__(self, api_key='') :
         self.headers = {
                         'Accept':          '*/*',
                         'Accept-Encoding': 'gzip, deflate',
                         'Content-Type':    'application/json',
-                        'Authorization':   'Bearer ec50cd47-25bc-4db6-9ad0-3b03de013277',
+                        'Authorization':   'Bearer ' + api_key,
                         }
 
     def auth(self) :
@@ -56,5 +56,5 @@ class transferwise :
         return r.json()
 
 if __name__ == '__main__' :
-    tw = transferwise()
+    tw = tw_api()
     tw.cancel_transfer('112912208')
