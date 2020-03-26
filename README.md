@@ -4,7 +4,8 @@ Website: transferwise.com
 
 # How-To
 - Open an account at transferwise.com
-- Obtain the token and input the token into the transferwise_api.py bearer token.
+- Obtain the token and input the token into the config.yaml bearer token.
+- Obtain profile account_id from transferwise and put into config.yaml. Refer https://github.com/tedchou12/transferwise/wiki/Example-of-config.yaml
 - Execute the `run.py` every */5 minutes in the crontab.
 
 # Concept
