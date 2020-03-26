@@ -18,10 +18,10 @@ class tw_api :
 
         return r.json()
 
-    def get_quote(self, profile='', amount=0) :
+    def get_quote(self, profile='', from_currency='JPY', to_currency='USD', amount=0) :
         data = {'profile':              str(profile),
-                'sourceCurrency':       'JPY',
-                'targetCurrency':       'USD',
+                'sourceCurrency':       from_currency,
+                'targetCurrency':       to_currency,
                 'sourceAmount':         amount,
                 # 'targetAmount':         0
                 }

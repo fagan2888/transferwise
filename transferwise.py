@@ -63,7 +63,7 @@ class transferwise :
         else :
             records = []
         # compare quotes
-        quote = self.tw.get_quote(self.profile, amount)
+        quote = self.tw.get_quote(self.profile, self.from_currency, self.to_currency, amount)
 
         now = datetime.datetime.now().strftime('%Y/%m/%d-%H:%M:%S')
         amount = 0
