@@ -1,5 +1,5 @@
 from . import tw_api
-# import tw_api
+#import tw_api
 import datetime
 import requests
 import json
@@ -19,9 +19,13 @@ import xlrd
 import urllib.request
 
 class transferwise :
-    def __init__(self) :
+    def __init__(self, config='') :
         # reading config parameters
-        file = open(os.path.join(os.path.split(os.path.abspath(__file__))[0], 'config.yaml'), 'r')
+        if config == '' :
+            file = open(os.path.join(os.path.split(os.path.abspath(__file__))[0], 'config.yaml'), 'r')
+        else :
+            file = open(config, 'r')
+
         data = file.read()
         data = yaml.load(data, Loader=yaml.FullLoader)
         for param in data :
